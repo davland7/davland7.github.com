@@ -31,20 +31,21 @@
 
     <script> 
    
-      // resize event listener to detect change in screen height 
-      window.addEventListener("resize", (e) => { 
-        const form = document.getElementById('text');
-
         form.addEventListener('focus', (event) => {
           event.target.value = "Virtual keyboard visible";
         }, true);
 
-        form.addEventListener('blur', (event) => {
-          event.target.value = '';
-        }, true);
 
+    </script> 
+
+<script> 
+const form = document.getElementById('text');
+   form.addEventListener('focus', (event) => {
+      // resize event listener to detect change in screen height 
+      window.addEventListener("resize", (e) => { 
+          event.target.value = "Virtual keyboard visible";
       }); 
-
+  }, true);
     </script> 
 </body>
 </html>
