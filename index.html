@@ -29,6 +29,9 @@
         </ul>
 <input type="text">
 <script>
+window.addEventListener("resize", (e) => { 
+        alert("Virtual keyboard detected!!!"); 
+      }); 
 if('visualViewport' in window) {
   window.visualViewport.addEventListener('resize', function(event) {
     if(event.target.height + 30 < document.scrollElement.clientHeight) {
