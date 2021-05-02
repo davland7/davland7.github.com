@@ -33,29 +33,18 @@
    
       // resize event listener to detect change in screen height 
       window.addEventListener("resize", (e) => { 
-        const form = document.getElementById('#text');
+        const form = document.getElementById('text');
 
-form.addEventListener('focus', (event) => {
-  event.target.value = "Virtual keyboard visible";
-}, true);
+        form.addEventListener('focus', (event) => {
+          event.target.value = "Virtual keyboard visible";
+        }, true);
 
-form.addEventListener('blur', (event) => {
-  event.target.value = '';
-}, true);
+        form.addEventListener('blur', (event) => {
+          event.target.value = '';
+        }, true);
 
       }); 
 
     </script> 
-<script>
-if('visualViewport' in window) {
-  window.visualViewport.addEventListener('resize', function(event) {
-    if(event.target.height + 30 < document.scrollElement.clientHeight) {
-        alert("keyboard up?");
-    } else {
-        alert("keyboard down?");
-    }
-  });
-}
-    </script>
 </body>
 </html>
