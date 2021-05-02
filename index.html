@@ -27,21 +27,21 @@
             <li><a href="https://rplayer.js.org">rplayer.js.org</a></li>
             <li><a href="https://chrome.google.com/webstore/detail/mini-radio/klcjochgjlcecbalpokmcldlfhngcnfh?utm_source=davidlandry.ca">Mini Radio</a></li>
         </ul>
-<input type="text">
-<h1 id="text">Change orientation/screen height</h1> 
-
-  
+<input type="text" id="text">
 
     <script> 
-
       const text = document.querySelector("#text"); 
-
-  
-// resize event listener to detect change in screen height 
-
+      // resize event listener to detect change in screen height 
       window.addEventListener("resize", (e) => { 
+        const form = document.getElementById('form');
 
-        text.innerHTML = "Virtual keyboard detected!!!"; 
+form.addEventListener('focus', (event) => {
+  event.target.value = "Virtual keyboard visible";
+}, true);
+
+form.addEventListener('blur', (event) => {
+  event.target.value = '';
+}, true);
 
       }); 
 
